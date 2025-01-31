@@ -1,4 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+
 
 import 'package:flutter/material.dart';
 
@@ -178,9 +178,9 @@ class _InsidecatogeriesState extends State<Insidecatogeries> {
       child: Row(
         spacing: 9.0,
         children: [
-          _buildFilterButton('Filters', Icons.tune_rounded),
+          _buildFilterButton('Filters', Icons.tune_rounded,),
          
-          _buildFilterButton('Sort', Icons.sort),
+          _buildFilterButton('Sort', Icons.sort,),
          
         
           
@@ -189,7 +189,7 @@ class _InsidecatogeriesState extends State<Insidecatogeries> {
     );
   }
 
-  Widget _buildFilterButton(String text, IconData icon) {
+  Widget _buildFilterButton(String text, IconData icon,) {
     return 
        ElevatedButton(
         onPressed: (){
@@ -197,11 +197,12 @@ class _InsidecatogeriesState extends State<Insidecatogeries> {
             context: context,
            
             builder: (BuildContext context){
+               // ignore: sized_box_for_whitespace
                return Container(
                 height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width,
                 //color: Colors.white,
-                child: Column(children: [],),
+               
                 );
           });
         },
