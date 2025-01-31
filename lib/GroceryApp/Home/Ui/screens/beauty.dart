@@ -1,30 +1,30 @@
 import 'package:animation_flutter/Data/dummy_data.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/Home/Ui/Ui%20Components/categoryRow.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/Home/Ui/Ui%20Components/featuredItems.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/Home/Ui/Ui%20Components/HomeAndKitchen.dart';
+
+import 'package:animation_flutter/GroceryApp/Home/Ui/Ui%20Components/categoryRow.dart';
+
+
+import 'package:animation_flutter/GroceryApp/Home/Ui/Ui%20Components/topRated.dart';
 import 'package:flutter/material.dart';
 
-class AllItems extends StatelessWidget {
-  const AllItems({super.key});
+class Beauty extends StatelessWidget {
+  const Beauty({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Padding(
           padding: const EdgeInsets.all(4.0),
           child: Column(
-            
-            children: [
-               
+                 
+            children: [ 
               Row(
                 children: [
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                            'Featured Items',
+                            'Top Rated',
                             style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.w700),
                           ),
                   ),
@@ -32,44 +32,33 @@ class AllItems extends StatelessWidget {
                 ],
               ),
                   
-                   FeaturedItems(data: featuredData),
+                   TopRated(data: beautyTopRated),
                     Row(
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            'Grocery & Kitchen',
+                            'Makeup & cosmetics',
                             style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.w700),
                           ),
                         ),
                       ],
                     ),
-                   HomeAndKitchen(data: fruitsData,dataDetails: insideData),
-                   Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Text(
-                            'Beauty & Personal Care',
-                            style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.w700),
-                          ),
-                        ),
-                      ],
-                    ),
-                    CategoryRow(data: makeupData),
+                   CategoryRow(data: makeupData),
                     Row(
                       children: [
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            'Makeup Accesssories',
+                            'Tools & accessories',
                             style: TextStyle(fontSize: 16.0,fontWeight: FontWeight.w700),
                           ),
                         ),
                       ],
                     ),
-                    CategoryRow(data: toolsData),
+                   CategoryRow(data: toolsData),
                    ],
+                   
                    ),
         ),
       ));

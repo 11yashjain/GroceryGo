@@ -5,7 +5,7 @@ import 'package:animation_flutter/Data/cart_items.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-import 'package:animation_flutter/GroceryApp_usingBloc/Home/Models/Home_Product_data_Model.dart';
+import 'package:animation_flutter/GroceryApp/Home/Models/Home_Product_data_Model.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 

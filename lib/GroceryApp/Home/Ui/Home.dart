@@ -1,12 +1,12 @@
 
-import 'package:animation_flutter/GroceryApp_usingBloc/Home/Ui/Ui%20Components/search.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/Home/Ui/screens/all.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/Home/Ui/screens/fruitsAndVegetables.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/Home/Ui/screens/technology.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/Home/Ui/screens/beauty.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/Home/bloc/home_bloc.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/Profile/Profile.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/auth/bloc/auth_bloc.dart';
+import 'package:animation_flutter/GroceryApp/Home/Ui/Ui%20Components/search.dart';
+import 'package:animation_flutter/GroceryApp/Home/Ui/screens/all.dart';
+import 'package:animation_flutter/GroceryApp/Home/Ui/screens/fruitsAndVegetables.dart';
+import 'package:animation_flutter/GroceryApp/Home/Ui/screens/technology.dart';
+import 'package:animation_flutter/GroceryApp/Home/Ui/screens/beauty.dart';
+import 'package:animation_flutter/GroceryApp/Home/bloc/home_bloc.dart';
+import 'package:animation_flutter/GroceryApp/Profile/Profile.dart';
+import 'package:animation_flutter/GroceryApp/auth/bloc/auth_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

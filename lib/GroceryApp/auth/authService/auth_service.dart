@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:animation_flutter/GroceryApp_usingBloc/auth/bloc/auth_bloc.dart';
+import 'package:animation_flutter/GroceryApp/auth/bloc/auth_bloc.dart';
 import 'package:animation_flutter/constants/Error_Handling.dart';
 
 import 'package:animation_flutter/constants/utils.dart';

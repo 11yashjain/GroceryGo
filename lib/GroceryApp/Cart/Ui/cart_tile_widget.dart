@@ -1,5 +1,5 @@
-import 'package:animation_flutter/GroceryApp_usingBloc/Cart/bloc/cart_bloc.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/Home/Models/Home_Product_data_Model.dart';
+import 'package:animation_flutter/GroceryApp/Cart/bloc/cart_bloc.dart';
+import 'package:animation_flutter/GroceryApp/Home/Models/Home_Product_data_Model.dart';
 
 import 'package:flutter/material.dart';
 

@@ -1,8 +1,8 @@
 
 
-import 'package:animation_flutter/GroceryApp_usingBloc/Home/Ui/Home.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/Profile/Profile.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/auth/screens/authScreen.dart';
+import 'package:animation_flutter/GroceryApp/Home/Ui/Home.dart';
+import 'package:animation_flutter/GroceryApp/Profile/Profile.dart';
+import 'package:animation_flutter/GroceryApp/auth/screens/authScreen.dart';
 import 'package:flutter/material.dart';
 
 Route<dynamic> generateRoute(RouteSettings routeSettings){

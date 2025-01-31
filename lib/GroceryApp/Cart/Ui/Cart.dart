@@ -1,7 +1,7 @@
 import 'package:animation_flutter/Data/cart_items.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/Cart/Ui/bottomsheet.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/Cart/Ui/cart_tile_widget.dart';
-import 'package:animation_flutter/GroceryApp_usingBloc/Cart/bloc/cart_bloc.dart';
+import 'package:animation_flutter/GroceryApp/Cart/Ui/bottomsheet.dart';
+import 'package:animation_flutter/GroceryApp/Cart/Ui/cart_tile_widget.dart';
+import 'package:animation_flutter/GroceryApp/Cart/bloc/cart_bloc.dart';
 
 import 'package:flutter/material.dart';
 
