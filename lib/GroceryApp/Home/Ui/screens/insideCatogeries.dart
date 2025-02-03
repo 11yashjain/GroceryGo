@@ -1,5 +1,6 @@
 
 
+import 'package:animation_flutter/Data/dummy_data.dart';
 import 'package:flutter/material.dart';
 
 
@@ -17,23 +18,7 @@ class Insidecatogeries extends StatefulWidget {
 }
 
 class _InsidecatogeriesState extends State<Insidecatogeries> {
-  final List<Map<String, dynamic>> categories = [
-    {
-      'name': 'Extension\nCables',
-      'icon': 'assets/extension.png',
-      'isSelected': true,
-    },
-    {
-      'name': 'Batteries',
-      'icon': 'assets/batteries.png',
-      'isSelected': false,
-    },
-    {
-      'name': 'Electrical\nAccessories',
-      'icon': 'assets/electrical.png',
-      'isSelected': false,
-    },
-  ];
+  
 
   final List<Map<String, dynamic>> products = [
     {
@@ -133,40 +118,28 @@ class _InsidecatogeriesState extends State<Insidecatogeries> {
       child: ListView.builder(
         itemCount: categories.length,
         itemBuilder: (context, index) {
-          final category = categories[index];
-          return Container(
-            padding: EdgeInsets.symmetric(vertical: 16),
-            decoration: BoxDecoration(
-              border: Border(
-                left: BorderSide(
-                  color: category['isSelected'] ? Colors.green : Colors.transparent,
-                  width: 3,
-                ),
-              ),
-            ),
-            child: Column(
+                 
+          final category = categories[index]['sideBarData'];
+          return 
+             Column(
               children: [
-                Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    shape: BoxShape.circle,
-                  ),
-                  child: Icon(Icons.electrical_services),
+                IconButton(
+                 onPressed: (){}, 
+                 icon:  Icon(category[index]['icon'],
+                 ),
                 ),
                 SizedBox(height: 8),
                 Text(
-                  category['name'],
+                  category[index]['sideBarData']['name'],
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 12,
                     color: category['isSelected'] ? Colors.green : Colors.grey[600],
                   ),
                 ),
+                
               ],
-            ),
-          );
+             );
         },
       ),
     );

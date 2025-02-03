@@ -225,3 +225,142 @@ const List insideData = [
   ],
 },
   ];
+
+  const List categories = [
+    {
+   "sideBarData": [
+    {
+      'name': 'Extension\nCables',
+      'icon': 'assets/extension.png',
+      'isSelected': true,
+    },
+    {
+      'name': 'Batteries',
+      'icon': 'assets/batteries.png',
+      'isSelected': false,
+    },
+    {
+      'name': 'Electrical\nAccessories',
+      'icon': 'assets/electrical.png',
+      'isSelected': false,
+    },
+   ]
+    },
+    {
+      "sideBarData": [
+        {
+          'name': 'Soft Drinks',
+          'icon': '',
+          'isSelected': false,
+        },
+        {
+          'name': 'Fruit Juices',
+          'icon': '',
+          'isSelected': false,
+        },
+        {
+          'name': 'Mango Drinks',
+          'icon': '',
+          'isSelected': false,
+        },
+      ],
+    },
+       {
+      "sideBarData": [
+        {
+          'name': 'Milk',
+          'icon': '',
+          'isSelected': false,
+        },
+        {
+          'name': 'Bread',
+          'icon': '',
+          'isSelected': false,
+        },
+        {
+          'name': 'Lassi & Milkshake',
+          'icon': '',
+          'isSelected': false,
+        },
+      ],
+    },
+    {
+      "sideBarData": [
+        {
+          'name': 'Corn Flakes',
+          'icon': '',
+          'isSelected': false,
+        },
+        
+      ],
+    },
+    {
+      "sideBarData": [
+        {
+          'name': 'Dog Food',
+          'icon': '',
+          'isSelected': false,
+        },
+        {
+          'name': 'Toys & Accessories',
+          'icon': '',
+          'isSelected': false,
+        },
+        {
+          'name': 'Gromming Needs',
+          'icon': '',
+          'isSelected': false,
+        },
+      ],
+    },
+    {
+      "sideBarData": [
+        {
+          'name': 'Chips & Wafers',
+          'icon': '',
+          'isSelected': false,
+        },
+        {
+          'name': 'Drinks',
+          'icon': '',
+          'isSelected': false,
+        },
+        
+      ],
+    },
+    {
+      "sideBarData": [
+        {
+          'name': 'Liquid Detergents',
+          'icon': '',
+          'isSelected': false,
+        },
+        {
+          'name': 'Dishwashing Gels',
+          'icon': '',
+          'isSelected': false,
+        },
+        {
+          'name': 'Toilet Cleaners',
+          'icon': '',
+          'isSelected': false,
+        },
+      ],
+    },
+    {
+      "sideBarData": [
+        {
+          'name': 'Chocolates',
+          'icon': '',
+          'isSelected': false,
+        },
+        {
+          'name': 'Ice Creams',
+          'icon': '',
+          'isSelected': false,
+        },
+        
+      ],
+    },
+    
+  ];

@@ -44,8 +44,8 @@ class Fruitsandvegetables extends StatelessWidget {
                         ),
                       ],
                     ),
-                   HomeAndKitchen(data: fruitsData,dataDetails: [],),
-            ],
+                   HomeAndKitchen(data: fruitsData,dataDetails: insideData),
+            ], 
                    ),
         ),
       ));
