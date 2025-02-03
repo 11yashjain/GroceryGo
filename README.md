@@ -19,7 +19,7 @@ This is a Flutter-based grocery app designed to provide a seamless shopping expe
 - **Frontend**: Flutter, Dart
 - **Backend**: Node.js
 - **Database**: MongoDB
-- **State Management**: Provider
+- **State Management**: Bloc
 - **API Communication**: RESTful APIs
 
 
