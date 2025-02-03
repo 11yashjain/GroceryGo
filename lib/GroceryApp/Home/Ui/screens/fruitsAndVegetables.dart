@@ -1,8 +1,9 @@
-import 'package:animation_flutter/Data/dummy_data.dart';
 
-import 'package:animation_flutter/GroceryApp/Home/Ui/Ui%20Components/featuredItems.dart';
-import 'package:animation_flutter/GroceryApp/Home/Ui/Ui%20Components/HomeAndKitchen.dart';
 import 'package:flutter/material.dart';
+
+import '../../../../Data/dummy_data.dart';
+import '../Ui Components/HomeAndKitchen.dart';
+import '../Ui Components/featuredItems.dart';
 
 class Fruitsandvegetables extends StatelessWidget {
   const Fruitsandvegetables({super.key});

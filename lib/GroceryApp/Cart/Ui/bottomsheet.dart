@@ -1,4 +1,4 @@
-import 'package:animation_flutter/Data/cart_items.dart';
+
 import 'package:flutter/material.dart';
 
 class Bottomsheet extends StatelessWidget {
@@ -6,9 +6,8 @@ class Bottomsheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const initialValue = 0.0;
-    final result = cartlistItems.fold<double>(initialValue,
-        (previousValue, element) => previousValue + element.price);
+    
+   
     return Container(
         height: 150.0,
         width: MediaQuery.of(context).size.width,
@@ -48,7 +47,7 @@ class Bottomsheet extends StatelessWidget {
                           borderRadius: BorderRadius.circular(40.0)),
                       child: Center(
                           child: Text(
-                        result.toString(),
+                        '',
                         style: const TextStyle(
                             fontSize: 18.0, fontWeight: FontWeight.bold),
                       )),

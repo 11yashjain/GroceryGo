@@ -1,11 +1,11 @@
-import 'package:animation_flutter/Data/cart_items.dart';
-import 'package:animation_flutter/GroceryApp/Cart/Ui/bottomsheet.dart';
-import 'package:animation_flutter/GroceryApp/Cart/Ui/cart_tile_widget.dart';
-import 'package:animation_flutter/GroceryApp/Cart/bloc/cart_bloc.dart';
+
 
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../bloc/cart_bloc.dart';
+import 'cart_tile_widget.dart';
 
 class Cart extends StatefulWidget {
   const Cart({super.key});
@@ -71,7 +71,7 @@ class _CartState extends State<Cart> {
                       ),
                     ),
                   ),
-                  if (cartlistItems.isNotEmpty) const Bottomsheet(),
+                 
                 ],
               );
 
@@ -97,19 +97,3 @@ class _CartState extends State<Cart> {
 }
 
 
-/*
- final List<cartItems> carts = [];
-    
-     final existingCart = carts.firstWhere(
-                            (cart) => cart.cartlistItems
-                                .any((p) => p.id == productDataModel.id),
-                          );
-                          // ignore: unnecessary_null_comparison
-                          if (existingCart != null) {
-                            existingCart.cartlistItems.add(productDataModel);
-                          } else {
-                            final newCart =
-                                cartItems(cartlistItems: [productDataModel]);
-                            carts.add(newCart);
-                          }
-*/
