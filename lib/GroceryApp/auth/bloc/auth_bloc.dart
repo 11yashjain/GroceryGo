@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:animation_flutter/models/user.dart';
+import 'package:Grocery_App/models/user.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:shared_preferences/shared_preferences.dart';

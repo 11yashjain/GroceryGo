@@ -1,4 +1,4 @@
-import 'package:animation_flutter/GroceryApp/auth/bloc/auth_bloc.dart';
+import 'package:Grocery_App/GroceryApp/auth/bloc/auth_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

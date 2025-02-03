@@ -1,6 +1,6 @@
 
 
-import 'package:animation_flutter/Data/dummy_data.dart';
+import 'package:Grocery_App/Data/dummy_data.dart';
 import 'package:flutter/material.dart';
 
 

@@ -1,6 +1,6 @@
 
 
-import 'package:animation_flutter/GroceryApp/Home/Ui/screens/insideCatogeries.dart';
+import 'package:Grocery_App/GroceryApp/Home/Ui/screens/insideCatogeries.dart';
 import 'package:flutter/material.dart';
 
 class HomeAndKitchen extends StatelessWidget {

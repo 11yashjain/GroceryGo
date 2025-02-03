@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:animation_flutter/GroceryApp/auth/bloc/auth_bloc.dart';
-import 'package:animation_flutter/constants/Error_Handling.dart';
 
-import 'package:animation_flutter/constants/utils.dart';
-import 'package:animation_flutter/models/user.dart';
+import 'package:Grocery_App/GroceryApp/auth/bloc/auth_bloc.dart';
+import 'package:Grocery_App/constants/Error_Handling.dart';
+import 'package:Grocery_App/constants/utils.dart';
+import 'package:Grocery_App/models/user.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';

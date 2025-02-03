@@ -1,7 +1,7 @@
-import 'package:animation_flutter/Data/dummy_data.dart';
-import 'package:animation_flutter/GroceryApp/Home/Ui/Ui%20Components/HomeAndKitchen.dart';
+import 'package:Grocery_App/Data/dummy_data.dart';
+import 'package:Grocery_App/GroceryApp/Home/Ui/Ui%20Components/HomeAndKitchen.dart';
 
-import 'package:animation_flutter/GroceryApp/Home/Ui/Ui%20Components/topDeals.dart';
+import 'package:Grocery_App/GroceryApp/Home/Ui/Ui%20Components/topDeals.dart';
 import 'package:flutter/material.dart';
 
 class Technology extends StatelessWidget {

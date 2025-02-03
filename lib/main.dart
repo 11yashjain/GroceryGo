@@ -1,11 +1,11 @@
-//import 'package:animation_flutter/GroceryApp_usingBloc/Home/Ui/Home.dart';
-import 'package:animation_flutter/GroceryApp/Home/Ui/Home.dart';
-import 'package:animation_flutter/GroceryApp/auth/authService/auth_service.dart';
-import 'package:animation_flutter/GroceryApp/auth/bloc/auth_bloc.dart';
-import 'package:animation_flutter/GroceryApp/auth/screens/authScreen.dart';
-import 'package:animation_flutter/constants/utils.dart';
 
-import 'package:animation_flutter/router.dart';
+import 'package:Grocery_App/GroceryApp/Home/Ui/Home.dart';
+import 'package:Grocery_App/GroceryApp/auth/authService/auth_service.dart';
+import 'package:Grocery_App/GroceryApp/auth/bloc/auth_bloc.dart';
+import 'package:Grocery_App/GroceryApp/auth/screens/authScreen.dart';
+import 'package:Grocery_App/constants/utils.dart';
+
+import 'package:Grocery_App/router.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
