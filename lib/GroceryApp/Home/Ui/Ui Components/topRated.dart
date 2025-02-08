@@ -18,7 +18,7 @@ class TopRated extends StatelessWidget {
           ),
         itemCount: data.length,
         itemBuilder: (context, index) => Padding(
-          padding: const EdgeInsets.all(10.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -54,7 +54,9 @@ class TopRated extends StatelessWidget {
                           
                         ),
                       ),
-                      onPressed: () {},
+                      onPressed: () {
+                        print('ok');
+                      },
                       child: const Text('ADD'),
                     ),
                   ),

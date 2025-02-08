@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
-const { Schema, model } = mongoose; // Destructure Schema and model
+const {productSchema} = require("./product"); // Destructure Schema and model
 
-const userSchema = Schema({
+const userSchema = mongoose.Schema({
     name: {
         requried: true,
         type:String,
@@ -22,17 +22,26 @@ const userSchema = Schema({
     password: {
         requried: true,
         type: String,
-       /* validate: {
-            validator: (value)=>{
-                return value.length > 6;
-            },
-            message: 'please enter password with more than 6 characters',
-        }*/
     },
     address:{
         type:String,
         default: '',
-    }
+    },
+    type: {
+        type: String,
+        default: "user",
+      },
+      cart: [
+        {
+          product: {type:mongoose.Schema.Types.ObjectId,
+            ref:'Product',
+            required:true},
+          quantity: {
+            type: Number,
+            required: true,
+          },
+        },
+      ],
 });
 
-module.exports = model("User", userSchema); //converting schema into model and exporting it.
+module.exports = mongoose.model("User", userSchema); //converting schema into model and exporting it.

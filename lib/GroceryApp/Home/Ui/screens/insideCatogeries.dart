@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class Insidecatogeries extends StatefulWidget {
   final List data;
   final String headerData;
-  Insidecatogeries({
+  const Insidecatogeries({
     super.key,
     required this.data, required this.headerData,
    
@@ -20,33 +20,6 @@ class Insidecatogeries extends StatefulWidget {
 class _InsidecatogeriesState extends State<Insidecatogeries> {
   
 
-  final List<Map<String, dynamic>> products = [
-    {
-      'name': 'Goldmedal Twister 2-Pin Extension Reel (5 m, White & Red)',
-      'image': 'assets/extension1.png',
-      'rating': 4.5,
-      'reviews': 20,
-      'originalPrice': 497,
-      'discountedPrice': 239,
-      'discount': '51% OFF',
-      'deliveryTime': '8 MINS',
-      'specs': ['2 Pin, 3 Pin', '5 mtrs'],
-      'tag': 'Bestseller',
-    },
-    {
-      'name': 'Ant Esports PS330 Extension Board',
-      'image': 'assets/extension2.png',
-      'rating': 4.0,
-      'reviews': 79,
-      'originalPrice': 1499,
-      'discountedPrice': 429,
-      'discount': '71% OFF',
-      'deliveryTime': '8 MINS',
-      'specs': [],
-    },
-    // Add more products as needed
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +30,7 @@ class _InsidecatogeriesState extends State<Insidecatogeries> {
             Expanded(
               child: Row(
                 children: [
-                  _buildSidebar(),
+                //  _buildSidebar(),   In Progress
                   Expanded(
                     child: Column(
                       children: [
@@ -118,19 +91,16 @@ class _InsidecatogeriesState extends State<Insidecatogeries> {
       child: ListView.builder(
         itemCount: categories.length,
         itemBuilder: (context, index) {
-                 
-          final category = categories[index]['sideBarData'];
+                
+          final category = categories[index];
+       
           return 
              Column(
               children: [
-                IconButton(
-                 onPressed: (){}, 
-                 icon:  Icon(category[index]['icon'],
-                 ),
-                ),
+               
                 SizedBox(height: 8),
                 Text(
-                  category[index]['sideBarData']['name'],
+                  category['sideBarData']['name'],
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 12,
@@ -252,138 +222,3 @@ class _InsidecatogeriesState extends State<Insidecatogeries> {
   }
 }
 
-/* 
-Card(
-          elevation: 0,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(8),
-            side: BorderSide(color: Colors.grey[300]!),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              if (product['tag'] != null)
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                  margin: EdgeInsets.all(6),
-                  decoration: BoxDecoration(
-                    color: Colors.amber[100],
-                    borderRadius: BorderRadius.circular(4),
-                  ),
-                  child: Text(
-                    product['tag'],
-                    style: TextStyle(fontSize: 12),
-                  ),
-                ),
-              Expanded(
-                child: Center(
-                  child: Image.asset(
-                    product['image'],
-                    fit: BoxFit.contain,
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.all(6),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    if (product['specs'].isNotEmpty)
-                      Wrap(
-                        spacing: 8,
-                        children: product['specs']
-                            .map<Widget>((spec) => Text(
-                                  spec,
-                                  style: TextStyle(
-                                    color: Colors.grey[600],
-                                    fontSize: 12,
-                                  ),
-                                ))
-                            .toList(),
-                      ),
-                    SizedBox(height: 4),
-                    Text(
-                      product['name'],
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(fontWeight: FontWeight.w500),
-                    ),
-                    SizedBox(height: 4),
-                    Row(
-                      children: [
-                        ...List.generate(
-                          5,
-                          (index) => Icon(
-                            index < product['rating']
-                                ? Icons.star
-                                : Icons.star_border,
-                            size: 16,
-                            color: Colors.amber,
-                          ),
-                        ),
-                        SizedBox(width: 4),
-                        Text(
-                          '(${product['reviews']})',
-                          style: TextStyle(
-                            color: Colors.grey[600],
-                            fontSize: 12,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 4),
-                    Row(
-                      children: [
-                        Icon(Icons.access_time, size: 16, color: Colors.green),
-                        SizedBox(width: 4),
-                        Text(
-                          product['deliveryTime'],
-                          style: TextStyle(
-                            color: Colors.grey[600],
-                            fontSize: 12,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 4),
-                    Row(
-                      children: [
-                        Text(
-                          '₹${product['discountedPrice']}',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16,
-                          ),
-                        ),
-                        SizedBox(width: 8),
-                        Text(
-                          'MRP ₹${product['originalPrice']}',
-                          style: TextStyle(
-                            decoration: TextDecoration.lineThrough,
-                            color: Colors.grey[600],
-                            fontSize: 12,
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 8),
-                    SizedBox(
-                      width: double.infinity,
-                      child: ElevatedButton(
-                        onPressed: () {},
-                        style: ElevatedButton.styleFrom(
-                         
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                        ),
-                        child: Text('ADD'),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        );
-*/ 

@@ -40,8 +40,7 @@ class _MyAppState extends State<MyApp> {
           debugShowCheckedModeBanner: false,
           onGenerateRoute: (settings) => generateRoute(settings),
           scaffoldMessengerKey: scaffoldMessengerKey,
-          home: 
-             BlocBuilder<AuthBloc, AuthState>(
+          home:  BlocBuilder<AuthBloc, AuthState>(
               builder: (context, state) {
                 if (state is AuthenticatedState) {
                   
@@ -60,5 +59,8 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
     );
+      
+    
   }
 }
+

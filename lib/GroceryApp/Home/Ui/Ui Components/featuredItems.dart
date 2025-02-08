@@ -1,14 +1,23 @@
 
+import 'package:Grocery_App/Data/cart.dart';
+import 'package:Grocery_App/GroceryApp/Home/bloc/home_bloc.dart';
+import 'package:Grocery_App/GroceryApp/Home/productService/product_service.dart';
+import 'package:Grocery_App/models/product.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedItems extends StatelessWidget {
   
 
-   const FeaturedItems({super.key, required this.data});
+   const FeaturedItems({super.key, required this.data, required this.homeBloc});
+   
    final List<Map<String, dynamic>> data;
-
+   final HomeBloc homeBloc;
+   
+ 
   @override
   Widget build(BuildContext context) {
+   
+    
     return GridView.builder(
      shrinkWrap: true,
      physics: NeverScrollableScrollPhysics(),
@@ -20,43 +29,56 @@ class FeaturedItems extends StatelessWidget {
       ),
       itemCount: data.length,
       itemBuilder: (context, index) {
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          spacing: 8,
-          children: [
-            Stack(
-              children:[ 
-                Card(
-                  elevation: 2.0,
-                  clipBehavior: Clip.hardEdge,
-                child: Image.network(data[index]['image'],height: 90,width: 90,fit: BoxFit.cover,),
+        
+        return  Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Stack(
+                children: [
+                  Card(
+                    elevation: 3.0,
+                    clipBehavior: Clip.hardEdge,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(9),
+                    ),
+                    child: Image.network(
+                      data[index]['image'],
+                      fit: BoxFit.cover,
+                      height: 110,
+                      width: 110,
+                    
+                    ),
+                  ),
+                  Positioned(
+                  right: 0.5,
+                   
+                top: 81,
+                width: 55.0,
+                height: 35.0,
+                    child: TextButton(
+                      style: TextButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        foregroundColor: Colors.green,
+                        shape: RoundedRectangleBorder(
+                          side: BorderSide(color: Colors.green),
+                          borderRadius: BorderRadius.circular(10),
+                          
+                        ),
+                      ),
+                      onPressed: () {
+                       homeBloc.add(HomeToCartEvent(data: data[index]));
+                      
+                       print(cartItems);
+                       
+                      },
+                      child: const Text('ADD'),
+                    ),
+                  ),
+                ],
               ),
-              Positioned(
-                right: 0.1,
-                top: 0.1,
-                width: 25.0,
-                height: 5.0,
-               
-                
-                child: IconButton(
-                  onPressed: (){}, 
-                  icon: Icon(Icons.add_box_rounded),
-                  iconSize: 33.0,
-                ),
-                ),
-              ],
-            ),  
-                Text(
-                  data[index]['name'],
-                  style: TextStyle(fontSize: 12.0,fontWeight: FontWeight.w500),
-                ),
-                Text(
-                  '${data[index]['price']}',
-                 
-                ),
-                
-               
-              ],
+               Center(child: Text(data[index]['name'])),
+              Center(child: Text(data[index]['price'])),
+            ],
         );
       },
     );

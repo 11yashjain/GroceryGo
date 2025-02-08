@@ -61,10 +61,7 @@ class _AuthscreenState extends State<Authscreen> {
           listenWhen: (previous,current)=> current is AuthActionState,
           buildWhen: (previous,current)=> current is! AuthActionState,
           listener: (context, state) {
-            // if(state is NavigateToHomeScreenActionState){
-            //   Navigator.pushNamedAndRemoveUntil(
-            //     context, Home.routename,(route)=>false);
-            // }
+            
           },
           builder: (context, state) {
             return SingleChildScrollView(

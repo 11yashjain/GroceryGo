@@ -1,4 +1,5 @@
 
+import 'package:Grocery_App/GroceryApp/Home/bloc/home_bloc.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../Data/dummy_data.dart';
@@ -6,10 +7,11 @@ import '../Ui Components/HomeAndKitchen.dart';
 import '../Ui Components/featuredItems.dart';
 
 class Fruitsandvegetables extends StatelessWidget {
-  const Fruitsandvegetables({super.key});
+  const Fruitsandvegetables({super.key,required this.homeBloc});
+   final HomeBloc homeBloc;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
     return Scaffold(
       
       body: SingleChildScrollView(
@@ -33,7 +35,7 @@ class Fruitsandvegetables extends StatelessWidget {
                 ],
               ),
                   
-                   FeaturedItems(data: featuredData),
+                   FeaturedItems(data: featuredData,homeBloc: HomeBloc(),),
                     Row(
                       children: [
                         Padding(

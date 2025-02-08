@@ -26,7 +26,8 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         password: '', 
         address: '', 
         type: '', 
-        token: '',
+        token: '', 
+        cart: [],
         );  
       
       user = User.fromJson(event.response);

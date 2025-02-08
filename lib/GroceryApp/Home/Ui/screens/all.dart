@@ -2,10 +2,12 @@ import 'package:Grocery_App/Data/dummy_data.dart';
 import 'package:Grocery_App/GroceryApp/Home/Ui/Ui%20Components/categoryRow.dart';
 import 'package:Grocery_App/GroceryApp/Home/Ui/Ui%20Components/featuredItems.dart';
 import 'package:Grocery_App/GroceryApp/Home/Ui/Ui%20Components/HomeAndKitchen.dart';
+import 'package:Grocery_App/GroceryApp/Home/bloc/home_bloc.dart';
 import 'package:flutter/material.dart';
 
 class AllItems extends StatelessWidget {
-  const AllItems({super.key});
+  const AllItems({super.key, required this.homeBloc, });
+  final HomeBloc homeBloc;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class AllItems extends StatelessWidget {
                 ],
               ),
                   
-                   FeaturedItems(data: featuredData),
+                   FeaturedItems(data: featuredData,homeBloc: HomeBloc()),
                     Row(
                       children: [
                         Padding(

@@ -1,5 +1,6 @@
 
 
+import 'package:Grocery_App/Data/cart.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -54,20 +55,17 @@ class _CartState extends State<Cart> {
           }
         },
         builder: (context, state) {
-          switch (state.runtimeType) {
-            case CartLoadingState:
-              return const Scaffold(
-                  body: Center(child: CircularProgressIndicator()));
-            case CartSuccesState:
-              final succesState = state as CartSuccesState;
+        
+              
               return Column(
                 children: [
                   Expanded(
                     child: ListView.builder(
-                      itemCount: succesState.cartItems.length,
+                      itemCount: cartItems.length,
                       itemBuilder: (context, index) => CartTileWidget(
                         cartBloc: cartBloc,
-                        productDataModel: succesState.cartItems[index],
+                        productData: cartItems[index],
+                        index: index,
                       ),
                     ),
                   ),
@@ -75,22 +73,22 @@ class _CartState extends State<Cart> {
                 ],
               );
 
-            case CartCrashState :
-              return const Center(
-                  child: Text(
-                "Something went Wrong, Please Try Again !",
-                style: TextStyle(color: Colors.black),
-              ));
-            case CartEmptyState:
-              return const Center(
-                  child: Text(
-                "Please add something !",
-                style: TextStyle(color: Colors.black),
-              ));
-            default:
-              return const Text('');
+            // case CartCrashState :
+            //   return const Center(
+            //       child: Text(
+            //     "Something went Wrong, Please Try Again !",
+            //     style: TextStyle(color: Colors.black),
+            //   ));
+            // case CartEmptyState:
+            //   return const Center(
+            //       child: Text(
+            //     "Please add something !",
+            //     style: TextStyle(color: Colors.black),
+            //   ));
+            // default:
+            //   return const Text('');
           }
-        },
+        
       ),
     );
   }

@@ -4,13 +4,14 @@ import 'package:Grocery_App/GroceryApp/Home/Models/Home_Product_data_Model.dart'
 import 'package:flutter/material.dart';
 
 class CartTileWidget extends StatelessWidget {
-  final ProductDataModel productDataModel;
+  final Map<String,dynamic> productData;
+  final int index;
   final CartBloc cartBloc;
 
   const CartTileWidget({
     super.key,
-    required this.productDataModel,
-    required this.cartBloc,
+    required this.productData,
+    required this.cartBloc, required this.index,
   });
 
   @override
@@ -19,8 +20,9 @@ class CartTileWidget extends StatelessWidget {
       height: 70.0,
       margin: const EdgeInsets.all(10),
       decoration: BoxDecoration(
-        color: Colors.white,
+       // color: Colors.white,
         borderRadius: BorderRadius.circular(15.0),
+        border: Border.all(color: Colors.black),
       ),
       child: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -34,7 +36,7 @@ class CartTileWidget extends StatelessWidget {
                   image: DecorationImage(
                       fit: BoxFit.cover,
                       image: NetworkImage(
-                        productDataModel.imageUrl,
+                        productData['image'],
                       ))),
             ),
             const SizedBox(width: 5),
@@ -42,12 +44,12 @@ class CartTileWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  productDataModel.description,
+                  '',
                   style: const TextStyle(
                       fontSize: 12, fontWeight: FontWeight.w500),
                 ),
                 Text(
-                  "\$ " "${productDataModel.price}",
+                  "\$ " "${productData['price']}",
                   style: const TextStyle(fontWeight: FontWeight.bold),
                 ),
               ],
@@ -58,17 +60,17 @@ class CartTileWidget extends StatelessWidget {
                 children: [
                   IconButton(
                     onPressed: () {
-                      cartBloc.add(CartRemoveFromCartEvent(
-                          productDataModel: productDataModel));
+                       cartBloc.add(CartRemoveFromCartEvent(
+                           productData: productData));
                     },
                     icon: const Icon(Icons.remove_circle_outline_sharp),
                   ),
-                  Text(productDataModel.count.toString()),
+                  Text(''),
                   IconButton(
                       onPressed: () {
-                        cartBloc.add(CartIncreaseInCartEvent(
-                          productDataModel: productDataModel,
-                        ));
+                        // cartBloc.add(CartIncreaseInCartEvent(
+                        //   productDataModel: productDataModel,
+                        // ));
                       },
                       icon: const Icon(Icons.add_circle_outline_sharp)),
                 ],

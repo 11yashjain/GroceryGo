@@ -12,10 +12,10 @@ class SortModal extends StatefulWidget {
   final SortOption currentSort;
 
   const SortModal({
-    Key? key,
+    super.key,
     required this.onSort,
     required this.currentSort,
-  }) : super(key: key);
+  });
 
   @override
   State<SortModal> createState() => _SortModalState();

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:Grocery_App/Data/cart.dart';
 import 'package:flutter/material.dart';
 
 
@@ -27,7 +28,8 @@ class CartBloc extends Bloc<CartBlocEvent, CartState> {
     CartRemoveFromCartEvent event,
     Emitter<CartState> emit,
   ) async {
-  
+     cartItems.remove(event.productData);
+     
   }
 
   FutureOr<void> cartIncreaseInCartEvent(

@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 
 //IMPORT FROM OTHER FILES
 const authRouter = require("./routes/auth");
+const userRouter = require("./routes/user");
 
 //INITILIZATION
 const PORT = 4000;
@@ -14,6 +15,7 @@ const DB = "mongodb+srv://vaibhav:vaibhav_database@cluster0.87yph.mongodb.net/?r
 //MIDDLEWARE
 app.use(json());
 app.use(authRouter);     //client -> server -> middleware -> client
+app.use(userRouter);
 
 //CONNECTIONS
 mongoose.connect(DB).then(()=>{

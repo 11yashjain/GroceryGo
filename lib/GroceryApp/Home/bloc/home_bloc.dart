@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:Grocery_App/Data/cart.dart';
+import 'package:Grocery_App/GroceryApp/Cart/Ui/bottomsheet.dart';
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 
@@ -12,6 +14,8 @@ class HomeBloc extends Bloc<HomeBlocEvent, HomeState> {
   HomeBloc() : super(HomeBlocInitial()) {
     on<HomeInitalEvent>(homeInitalEvent);
     on<HomeProfileNavigateEvent>(homeProfileNavigateEvent);
+    on<HomeToCartEvent>(homeToCartEvent);
+    on<HomeCartBottomSheetEvent>(homeCartBottomSheetEvent);
   }
 
   FutureOr<void> homeInitalEvent(
@@ -22,8 +26,25 @@ class HomeBloc extends Bloc<HomeBlocEvent, HomeState> {
       HomeProfileNavigateEvent event, Emitter<HomeState> emit)  {
 
         emit(HomeNavigateToProfileActionState());
+    }
+    
+  FutureOr<void> homeToCartEvent(
+      HomeToCartEvent event, Emitter<HomeState> emit)  {
+       
+         cartItems.add(event.data);
+              
+         
+
+          
     }   
-   
+
+    FutureOr<void> homeCartBottomSheetEvent(
+      HomeCartBottomSheetEvent event, Emitter<HomeState> emit)  {
+       
+        
+          
+    }    
+    
   
 
  

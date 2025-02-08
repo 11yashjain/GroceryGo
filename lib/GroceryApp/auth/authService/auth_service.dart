@@ -27,6 +27,7 @@ class AuthService{
         address: '', 
         type: '', 
         token: '',
+        cart: [],
         );
     final response = await http.post(
       Uri.parse('$uri/api/signup'),
@@ -110,7 +111,7 @@ class AuthService{
           }
          );
         authBloc.add(AuthUserData(response: userRes.body));
-        final userData = jsonDecode(userRes.body);
+        var userData = jsonDecode(userRes.body);
         //String userToken = userData['token'] ?? token;
         
         authBloc.add(AuthAuthenticated(user: userData)); 

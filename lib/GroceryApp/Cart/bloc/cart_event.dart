@@ -6,9 +6,9 @@ abstract class CartBlocEvent {}
 class CartInitalEvent extends CartBlocEvent {}
 
 class CartRemoveFromCartEvent extends CartBlocEvent {
-  final ProductDataModel productDataModel;
+  final Map<String,dynamic> productData;
 
-  CartRemoveFromCartEvent({required this.productDataModel});
+  CartRemoveFromCartEvent({required this.productData});
 }
 
 class CartIncreaseInCartEvent extends CartBlocEvent {

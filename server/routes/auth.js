@@ -38,6 +38,9 @@ authRouter.post("/api/signin",async (req,res)=>{
   try{
     const {email,password} = req.body;   //data from user
     const user = await  User.findOne({ email });     //check if it is correct(self)
+    
+    
+
     if(!user){
       return res.status(400).json({msg:"User Does not exist!"});
     }
@@ -64,8 +67,8 @@ try{
   res.json(true);
 }catch(e){
   res.status(500).json({error: e.message});
-  
-}
+  console.log( res.status(500).json({error: e.message}));
+ }
 }); 
 
 // get user data
