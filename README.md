@@ -36,4 +36,8 @@ This is a Flutter-based grocery app designed to provide a seamless shopping expe
 - MongoDB for providing a flexible NoSQL database.
 - Node.js for enabling a scalable backend solution.
 
+## Contact
+
+- Yash Jain : yashj0768@gmail.com
+
 
